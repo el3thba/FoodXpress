@@ -16,6 +16,10 @@
 </p>
 
 <p>
+  <strong>Price after discount:</strong>
+  <%= @order.total - (@order.total * @order.discount)/100 %>
+</p>
+<p>
   <strong>Shipping:</strong>
   <%= @order.shipping %>
 </p>

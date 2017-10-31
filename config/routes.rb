@@ -4,11 +4,15 @@ Rails.application.routes.draw do
   resources :order_items
   resource :carts, only: [:show]
   get '/receipt' => "pages#receipt"
-  
+
   root "home#index"
+
+  root "admin#index"
+  get 'admin/index'
   get 'sessions/create'
 
   get 'sessions/destroy'
+
 
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -20,5 +24,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   end
 
-root 'admin#index'
+
 end

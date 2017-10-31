@@ -1,13 +1,22 @@
 class SessionsController < ApplicationController
-  skip_before_action :authorize
+  # skip_before_action :authorize
   def new
+    
   end
 
   def create
     user =User.find_by(name: params[:name])
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to admin_url
+      # if user.role = "Restaurant"
+      #   redirect_to orders_url
+      # end
+      # if user.role = "Supplier"
+      #   redirect_to carts_url
+      # end
+      # if user.role = "admin"
+      #   redirect_to admin_url
+      # end
 
     else
       redirect_to login_url, alert: "Invalid Username or Password"

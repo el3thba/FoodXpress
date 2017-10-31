@@ -26,7 +26,16 @@
     <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
   </div>
 
+  <div class="field">
+  <%= form.label :autolyse %><br />
+  <%= form.label :autolyse, "I'm a Restaurant", :value => "Restaurant"%>
+  <%= form.radio_button :autolyse, true %>
+  <%= form.label :autolyse, "I'm a Supplier", :value => "Supplier"%>
+  <%= form.radio_button :autolyse, false, :checked => true %>
+</div>
+
   <div class="actions">
-    <%= form.submit %>
+    <!-- <%= form.submit %> -->
   </div>
 <% end %>
+<a href="http://localhost:3000/products"><button type="submit">Sign Up</button></a>

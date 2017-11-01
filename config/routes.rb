@@ -5,18 +5,17 @@ Rails.application.routes.draw do
   resource :carts, only: [:show]
   get '/receipt' => "pages#receipt"
 
-  root "home#index"
+
 
   root "admin#index"
-  root "sessions#create"
-  root "users#new"
+
 
   get 'admin/index'
   get '/sessions/create'
   get '/users/new'
 
   get 'sessions/destroy'
-
+  get 'home/index'
 
 
   resources :users

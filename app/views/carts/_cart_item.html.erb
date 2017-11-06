@@ -17,10 +17,16 @@
 					<div class="pull-right">
 					<%= form_for(item, remote: true) do |f| %>
 						<%= f.hidden_field :product_id, value: item.product.id %>
-						<h5><%= item.product.price %></h5>
+						<h5>Price before discount:<%= item.product.price %></h5>
+						<td>Price After discount<%= item.product.price - (item.product.price * item.product.discount)/100 %>
+						<!-- <h5><%= item.product.price %></h5> -->
 						<div class="form-group">
 							<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
 						</div>
+						<div class="form-group">
+		<%= f.label :image %>
+		<%= f.file_field :image %>
+	</div>
 						<div class="btn-group">
 							<%= f.submit "Update Quantity", class: 'btn btn-primary' %>
 							<%= link_to "Delete", item, method: :delete, remote: true, class: 'btn btn-danger'  %>

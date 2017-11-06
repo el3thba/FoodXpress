@@ -64,6 +64,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 					<td><%= product.price %></td>
 					<td><%= product.discount %></td>
 					<td><%= product.date %></td>
+          <td><%= image_tag product.image.url(:thumb) %></td>
 					<td>
 						<%= link_to "Edit", edit_product_path(product) %>
 						<%= link_to "Delete", product_path(product), method: :delete %>

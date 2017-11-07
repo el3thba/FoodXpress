@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :products
   resources :order_items
-  resource :carts, only: [:show]
+  resources :carts, only: [:show]
   get '/receipt' => "pages#receipt"
 
 
@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
   get 'home/index'
+  get 'supplier/index'
+  get 'restaurant/index'
 
 
   resources :users

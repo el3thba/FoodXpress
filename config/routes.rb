@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :products
   resources :order_items
-  resources :carts, only: [:show]
+  resource :carts, only: [:show]
   get '/receipt' => "pages#receipt"
 
 
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'supplier/index'
   get 'restaurant/index'
-
+  # get ''
 
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

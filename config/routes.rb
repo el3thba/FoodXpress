@@ -29,6 +29,7 @@ get '/restaurant' => "restaurant#index"
   # get 'supplier/index'
   get 'restaurant/index'
   get 'products/index'
+  get 'products/new'
   get '/pay' => "pages#pay"
   #get 'admin/index' => 'home#index'
   # get ''

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102102323) do
+ActiveRecord::Schema.define(version: 20171114132546) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+  end
 
   create_table "order_items", force: :cascade do |t|
     t.integer "product_id"
@@ -31,6 +40,12 @@ ActiveRecord::Schema.define(version: 20171102102323) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "text"
+    t.integer "rating"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "title"
     t.float "price"
@@ -42,6 +57,15 @@ ActiveRecord::Schema.define(version: 20171102102323) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.date "productiondate"
+    t.float "unitsperpackage"
+    t.string "productbrand"
+    t.string "productdiscription"
+    t.string "producttype"
+    t.integer "supplyinstock"
+    t.string "deliverytime"
+    t.string "location"
+    t.string "units"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,6 +74,8 @@ ActiveRecord::Schema.define(version: 20171102102323) do
     t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
+    t.string "location"
   end
 
 end

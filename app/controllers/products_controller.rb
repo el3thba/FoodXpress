@@ -2,6 +2,8 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
   end
+  def show
+  end
   def new
     @product = Product.new
   end
@@ -28,18 +30,22 @@ class ProductsController < ApplicationController
     end
   end
 
-  # def show
-  #
-  # end
-
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to products_path
   end
+    def current_order
+     if !session[:order_id].nil?
+      Order.find(session[:order_id])
+    else
+      Order.new
+     end
+  end
+
 
     private
     def product_params
-      params.require(:product).permit(:title, :price, :discount, :date, :image)
+      params.require(:product).permit(:title, :price, :discount, :image, :date, :unitsperpackage, :productiondate, :productbrand, :productdiscription, :supplyinstock, :deliverytime, :location, :units)
     end
 end

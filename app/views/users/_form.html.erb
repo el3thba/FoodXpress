@@ -13,29 +13,42 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :user_name %>
+    <%= form.text_field :name %>
   </div>
-
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
   <div class="field">
     <%= form.label :password %>
-    <%= form.password_field :password, id: :user_password %>
+    <%= form.password_field :password %>
   </div>
 
   <div class="field">
     <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
+    <%= form.password_field :password_confirmation %>
   </div>
 
-  <div class="field">
+  <!-- <div class="field">
   <%= form.label :autolyse %><br />
   <%= form.label :autolyse, "I'm a Restaurant", :value => "Restaurant"%>
   <%= form.radio_button :autolyse, true %>
   <%= form.label :autolyse, "I'm a Supplier", :value => "Supplier"%>
   <%= form.radio_button :autolyse, false, :checked => true %>
+</div> -->
+<div class="field">
+  <%= form.label :Supplier_or_Restaurant_? %>
+  <%= form.text_field :role %>
 </div>
 
   <div class="actions">
+    <a href="/home"><button type="submit">Sign Up</button></a>
+
     <!-- <%= form.submit %> -->
   </div>
 <% end %>
-<a href="https://eerie-ghost-21722.herokuapp.com/products"><button type="submit">Sign Up</button></a>
+<!-- <a href="products/index"><button type="submit">Sign Up</button></a> -->

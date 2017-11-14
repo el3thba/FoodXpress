@@ -12,32 +12,51 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<h3><%= item.product.title %></h3>
+					<h5>Left Stock:<%= item.product.supplyinstock - item.quantity %> </h5>
+					<h5>Delivery urgency</h5>
+					<form>
+  <input type="radio" name="gender" value="male" checked> Normal: 2+ hours<br>
+  <input type="radio" name="gender" value="female"> Fast: 1 hours <br>
+  <input type="radio" name="gender" value="other"> Urgent: 30 minutes or less
+</form>
+
 				</div>
 				<div class="col-sm-4">
 					<div class="pull-right">
 					<%= form_for(item, remote: true) do |f| %>
 						<%= f.hidden_field :product_id, value: item.product.id %>
-						<h5>Price before discount:<%= item.product.price %></h5>
-						<td>Price After discount<%= item.product.price - (item.product.price * item.product.discount)/100 %>
-						<!-- <h5><%= item.product.price %></h5> -->
+						<h5><%= item.product.price %></h5>
 						<div class="form-group">
 							<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
 						</div>
-						<div class="form-group">
-		<%= f.label :image %>
-		<%= f.file_field :image %>
-	</div>
-						<div class="btn-group">
+			<div class="btn-group">
 							<%= f.submit "Update Quantity", class: 'btn btn-primary' %>
 							<%= link_to "Delete", item, method: :delete, remote: true, class: 'btn btn-danger'  %>
 						</div>
 						<span>Total Price: <%= item.TotalPrice %></span>
 					<% end %>
+					<td>TotalPriceAfterDiscount <%= item.TotalPrice - (item.TotalPrice * item.product.discount)/100 %></td>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	<% end %>
 <% else %>
-
 <% end %>
+<br><br>
+
+<a href="/pay"><button class="button" style="vertical-align:middle, background-color: green "><span>Check Out </span></button></a>
+<br>
+
+<br>
+
+<h6>Important Info </h6>
+	<p>The following products delivery prices will differ according to how far your restaurant is from the location of the product. If the restaurant is far away from the product, the estimate price for delivery can increase and will be determined by supplier. Additionally, the time of delivery will depend on the urgency of the product delivery time. If the product is needed urgently, there will be an extra fee to pay to the delivery charges.</p><br>
+
+
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+	}
+</style>

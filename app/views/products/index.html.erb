@@ -20,11 +20,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-top" style="margin-left: -165px">
   <div class="w3-bar w3-black w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="admin#index" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="admin" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
     <a href="sessions/create" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Suppliers</a>
     <a href="sessions/create" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Restaurants</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Us</a>
+    <a href="admin" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="margin-left: 300px;">Sign Out</a>
+
   </div>
 
   <!-- Navbar on small screens -->
@@ -43,37 +45,56 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </header>
 <body>
 
-<h1 style="margin-left: 490px">Products</h1>
-<div style="margin-left: 350px; width: 400px">
-<%= link_to "New product", new_product_path %>
-</div>
-<div class="col-md-6 col-md-offset-3">
-	<table class="table" style="margin-left: 300px; width: 800px; height: 300px; font-size: 14px">
-		<thead>
-			<tr>
-				<th>Title</th>
-				<th>Price</th>
-				<th>Discount%</th>
-				<th>Expiry Date</th>
-			</tr>
-		</thead>
-		<tbody>
-			<% @products.each do |product| %>
-				<tr>
-					<td><%= product.title %></td>
-					<td><%= product.price %></td>
-					<td><%= product.discount %></td>
-					<td><%= product.date %></td>
-          <td><%= image_tag product.image.url(:thumb) %></td>
-					<td>
-						<%= link_to "Edit", edit_product_path(product) %>
-						<%= link_to "Delete", product_path(product), method: :delete %>
-					</td>
-				</tr>
-			<% end %>
-		</tbody>
-	</table>
-</div>
+<!-- <h1 style="margin-left: 490px">Products</h1>
+<div style="margin-left: 350px; width: 400px"> -->
+  <h1>Products</h1>
+  <div style="margin-left: 350px; width: 400px">
+  <%= link_to "New product", new_product_path %>
+  <div class="col-md-6 col-md-offset-3">
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Type</th>
+  				<th>Brand</th>
+  				<th>Price</th>
+  				<th>Discount%</th>
+  				<th>Production Date</th>
+  				<th>Expiry Date</th>
+  				<th>Units Per Package</th>
+  				<th>Units</th>
+  				<th>Discription</th>
+  				<th>Delivery Time</th>
+  				<th>Location</th>
+  				<th>Supply in Stock </th>
+
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<% @products.each do |product| %>
+  				<tr>
+  					<td><%= product.title %></td>
+  					<td><%= product.productbrand %></td>
+  					<td><%= product.price %></td>
+  					<td><%= product.discount %></td>
+  					<td><%= product.productiondate %></td>
+  					<td><%= product.date %></td>
+  					<td><%= product.unitsperpackage %></td>
+  					<td><%= product.units %></td>
+  					<td><%= product.productdiscription %></td>
+  					<td><%= product.deliverytime %></td>
+  					<td><%= product.location %></td>
+  					<td><%= product.supplyinstock %></td>
+  					<td><%= image_tag product.image.url(:thumb) %></td>
+
+  					<td>
+  						<%= link_to "Edit", edit_product_path(product) %>
+  						<%= link_to "Delete", product_path(product), method: :delete %>
+  					</td>
+  				</tr>
+  			<% end %>
+  		</tbody>
+  	</table>
+  </div>
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-grey" style="margin-left: -165px; margin-right: -165px;" >
   <div class="w3-xlarge w3-padding-32">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>

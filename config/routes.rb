@@ -30,6 +30,7 @@ get '/restaurant' => "restaurant#index"
   get 'restaurant/index'
   get 'products/index'
   get 'products/new'
+  get 'posts/new'
   get '/pay' => "pages#pay"
   #get 'admin/index' => 'home#index'
   # get ''

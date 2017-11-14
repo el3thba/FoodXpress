@@ -39,19 +39,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-orange w3-center">
+<header class="w3-container w3-orange w3-center" style="background-color: #46A27C !important; margin-bottom: 20px;" >
     <div class="img-tag-div">
-        <h1 class="w3-margin w3-jumbo food-h1">FoodXpress</h1>
+        <!-- <h1 class="w3-margin w3-jumbo food-h1">FoodXpress</h1> -->
          <%= image_tag("abc1.png", :alt => "logo", :class => "img-logo") %>
+         <h1 class="w3-margin w3-jumbo food-h1">Your platform to reducing food supply waste<br> while catering to your urgent food supply needs</h1>
     </div>
 </header>
 <body>
 
 
 
+
 	<div class="supply">
 
-        <h1>Supplies for sale</h1>
+        <h1>Food Supplies for sale</h1>
         <div class="form-div">
             <%= form_tag home_index_path, :method => 'get' do %>
             <%= text_field_tag :search, params[:search] %>
@@ -66,7 +68,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <% @products.each do |product| %>
 
                         <li>
-        				<h3>Food: <%= product.title %></h3>
+        				<h3><%= product.title %></h3>
         				<%= image_tag product.image.url(:thumb) %>
                         <p>
         				Production Date: <%= product.productiondate %>
@@ -89,8 +91,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                         <p>
         				Location: <%= product.location %>
                         </p>
-        <!-- <h3>aa <%= link_to "#{current_order.a}", carts_path %> </h3>
-         -->
+
                         <p>
         				Discount:<%= product.discount %>%
                         </p>
@@ -106,7 +107,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         						<%= f.text_field :quantity, value: 1, min: 1, class: 'form-control' %>
 
         					<%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
-                  <a href="posts/new"><button class="button" style="vertical-align:middle, color: green "><span>Add Review </span></button>
+                                <a href="/posts/new"><button class="button" style="vertical-align:middle, color: green "><span>Add Review </span></button>
         				<% end %>
 
                         </li>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resource :carts, only: [:show]
   resources :posts
   get '/receipt' => "pages#receipt"
+  get '/supplier' => "pages#supplier"
 
 
 
@@ -19,22 +20,19 @@ get '/create' => "sessions#create"
 get '/new' => "users#new"
 get '/home' => "home#index"
 get '/restaurant' => "restaurant#index"
-# get '/supplier' => "supplier#index"
+get '/supplier' => "supplier#index"
 
 
 
 
   get 'sessions/destroy'
   get 'home/index'
-  # get 'supplier/index'
+  get 'supplier/index'
   get 'restaurant/index'
   get 'products/index'
-  get 'products/new'
-  get 'posts/new'
   get '/pay' => "pages#pay"
   #get 'admin/index' => 'home#index'
   # get ''
-  get '/supplier' => "pages#supplier"
 
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

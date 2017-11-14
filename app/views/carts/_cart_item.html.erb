@@ -1,16 +1,16 @@
 <% if !@order_item.nil? && @order_item.errors.any? %>
 	<ul>
 		<% @order_item.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
+			<!-- <li><%= msg %></li> -->
 		<% end %>
 	</ul>
 <% end %>
 
 <% if @order_items.size>0 %>
 	<% @order_items.each do |item| %>
-		<div class="well">
+		<div class="well cart-item">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-6 cart-product">
 					<h3><%= item.product.title %></h3>
 					<h5>Left Stock:<%= item.product.supplyinstock - item.quantity %> </h5>
 					<h5>Delivery urgency</h5>
@@ -21,8 +21,8 @@
 </form>
 
 				</div>
-				<div class="col-sm-4">
-					<div class="pull-right">
+				<div class="col-sm-6 cart-product">
+					<div class="pull-product">
 					<%= form_for(item, remote: true) do |f| %>
 						<%= f.hidden_field :product_id, value: item.product.id %>
 						<h5><%= item.product.price %></h5>
@@ -30,10 +30,10 @@
 							<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
 						</div>
 			<div class="btn-group">
-							<%= f.submit "Update Quantity", class: 'btn btn-primary' %>
+							<%= f.submit "Update Quantity", class: 'btn btn-primary btn-quantity' %>
 							<%= link_to "Delete", item, method: :delete, remote: true, class: 'btn btn-danger'  %>
 						</div>
-						<span>Total Price: <%= item.TotalPrice %></span>
+						<span class="total-price">Total Price: <%= item.TotalPrice %></span>
 					<% end %>
 					<td>TotalPriceAfterDiscount <%= item.TotalPrice - (item.TotalPrice * item.product.discount)/100 %></td>
 
@@ -43,10 +43,11 @@
 		</div>
 	<% end %>
 <% else %>
-<% end %>
-<br><br>
-
-<a href="/pay"><button class="button" style="vertical-align:middle, background-color: green "><span>Check Out </span></button></a>
+<% end %><br>
+<div style= "margin-left:495px">
+<a href="/pay"><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-black">Check Out</button></a>
+<!-- <a href="/pay"><button class="button" style=" background-color: light green; margin-left:470px; font-size: 30px "><span>Check Out </span></button></a> -->
+</div>
 <br>
 
 <br>
@@ -58,5 +59,7 @@
 <style>
 .button {
     background-color: #4CAF50; /* Green */
-	}
-</style>
+}
+  </style>
+
+<!-- <a href="/pay"> -->

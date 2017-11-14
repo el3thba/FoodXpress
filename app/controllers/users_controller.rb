@@ -8,15 +8,6 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-
-  def is_restaurant?
-    current_user.role == 'Restaurant'
-  end
-
-  def is_supplier?
-    current_user.role == 'Supplier'
-  end
-
   # GET /users/1
   # GET /users/1.json
   def show
@@ -25,7 +16,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
-
+  
   end
 
   # GET /users/1/edit
@@ -77,14 +68,6 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
-    end
-
-    def redirect_after_sign_up
-      if current_user.is_restaurant?
-        redirect_to '/restaurant'
-      else
-        redirect_to '/supplier'
-      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -1,10 +1,10 @@
 class OrderItemsController < ApplicationController
-		def create
+	def create
 		@order = current_order
 		@order_item = @order.order_items.new(order_item_params)
-			@product = Product.find(@order_item.product_id)
-			@product.supplyinstock = @product.supplyinstock - @order_item.quantity
-			@product.save
+		@product = Product.find(@order_item.product_id)
+		@product.supplyinstock = @product.supplyinstock - @order_item.quantity
+		@product.save
 		@order.save
 		session[:order_id] = @order.id
 	end

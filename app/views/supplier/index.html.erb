@@ -3,35 +3,48 @@
     <div class="col-md-12">
     <h1>  <%= User.find(session[:user_id]).name %> </h1>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
+    <!-- <table class="table"> -->
+      <!-- <thead>
+        <tr> -->
+          <!-- <th>Name</th>
           <th>E-mail</th>
-          <th>Role</th>
-
+          <th>Role</th> -->
+          <!-- <img src="http://tawarmall.qa/wp-content/uploads/2017/06/Labcafe-logo.jpg" alt="edit"/> -->
+<br><br>
           <th colspan="3"></th>
         </tr>
       </thead>
-
+      <!-- <a href="http://tawarmall.qa/wp-content/uploads/2017/06/Labcafe-logo.jpg"></a> -->
       <tbody>
+        <div style="font-size: 20px;">
+
         <% #@users.each do |user| %>
           <tr>
+
+<strong>
             <td>
             <% if !session[:user_id].nil? %>
-              <%= User.find(session[:user_id]).name %>
+              <%= User.find(session[:user_id]).role %>
+            <% end %>
+          </strong>
+
+            </td>
+            <br>
+            <br>
+            <br>
+            <td>
+            <% if !session[:user_id].nil? %>
+              <%= User.find(session[:user_id]).discreption %>
             <% end %>
             </td>
-
-
+          </div>
           </tr>
         <% #end %>
       </tbody>
     </table>
-
     <br>
 
-    <%= link_to 'New User', new_user_path %>
+    <!-- <%= link_to 'New User', new_user_path %> -->
 
     </div>
   </div>

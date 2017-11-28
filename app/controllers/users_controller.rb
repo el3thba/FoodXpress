@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
-  
+
   end
 
   # GET /users/1/edit
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        
+
         session[:user_id] = @user.id
 
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -77,6 +77,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :location, :password, :password_confirmation, :role)
+      params.require(:user).permit(:name, :discreption, :email, :location, :password, :password_confirmation, :role)
     end
 end

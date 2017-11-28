@@ -1,33 +1,42 @@
-<%= render @post.comments %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<%= render @post.comments %>
 
-<div>Restaurant Name: <%= @post.title %></div>
-<div>
- Comment: <%= @post.text %>
-</div>
-<div>
- Your rating: <%= @post.rating %>
-</div>
-<br>
-<!-- <h2> <%= @post.comments.count %> Comments </h2>
- --><!-- <h3> Add a comment: </h3> -->
-<br>
-<%=link_to "Edit", edit_post_path(@post) %>
-<%=link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure"} %>
+			<div>Restaurant Name: <%= @post.title %></div>
+			<div>
+			 Comment: <%= @post.text %>
+			</div>
+			<div>
+			 Your rating: <%= @post.rating %>
+			</div>
+			<br>
+			<!-- <h2> <%= @post.comments.count %> Comments </h2>
+			 --><!-- <h3> Add a comment: </h3> -->
+			<br>
+			<%=link_to "Edit", edit_post_path(@post) %>
+			|
+			<%=link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure"} %>
 
+			<br><br>
+			<a href="/posts"><button class="button" style="vertical-align:middle, background-color: green "><span>View Comments </span></button></a>
 
-<a href="/posts"><button class="button" style="vertical-align:middle, background-color: green "><span>View Comments </span></button></a>
+			<br><br>
+		</div>	
+	</div>	
+</div>	
 
 <style>
-.button {
-    background-color: #4CAF50; /* Green */
-    width:100px;
-    height:50px;
-    color: white;
-    border-radius: 8px;
+	.button {
+	    background-color: #4CAF50; /* Green */
+	    width:100px;
+	    height:50px;
+	    color: white;
+	    border-radius: 8px;
 
-}
+	}
 
-.button:hover {
-    background-color: #3e8e41;
-}
-  </style>
+	.button:hover {
+	    background-color: #3e8e41;
+	}
+</style>

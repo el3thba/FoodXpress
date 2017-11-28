@@ -1,9 +1,30 @@
 class ProductsController < ApplicationController
+  
+  before_action :auth_user
+
+  
+  def auth_user
+    if(session[:user_id].nil?)
+      redirect_to '/login'
+    end
+  end
+
   def index
-    @products = Product.all
+    @products = Product.all.order("date ASC")
   end
   def show
+    @product = Product.find(params[:id])
+    @order_item = current_order.order_items.new
   end
+
+  def current_order
+     if !session[:order_id].nil?
+      Order.find(session[:order_id])
+    else
+      Order.new
+     end
+  end
+  
   def new
     @product = Product.new
   end

@@ -1,20 +1,36 @@
-<h1>This is the restaurant home page</h1>
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User name:</strong>
-  <%= @user.user_name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>This is the restaurant home page</h1>
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+      <p>
+        <strong>User name:</strong>
+        <% if @user.present? %>
+        <%= @user.user_name %>
+        
+      </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+      <p>
+        <strong>Password:</strong>
+        <%= @user.password %>
+      </p>
+
+
+      <%= link_to 'Edit', edit_user_path(@user) %> |
+      <%= link_to 'Back', users_path %>
+      <% end %>
+
+      <br><br>
+    </div>  
+
+  </div>
+
+</div>
+

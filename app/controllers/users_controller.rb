@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout "application"
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   # skip_before_action :authorize, only: [:new, :create, :index]
 
@@ -31,6 +32,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        
+        session[:user_id] = @user.id
+
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -59,6 +63,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
+      session[:user_id] = ""
       format.html { redirect_to @user, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end

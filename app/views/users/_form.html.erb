@@ -11,26 +11,26 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= form.label :location %>
-    <%= form.text_field :location %>
+    <%= form.text_field :location, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= form.label :password %>
-    <%= form.password_field :password %>
+    <%= form.password_field :password, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
+    <%= form.password_field :password_confirmation, class: 'form-control' %>
   </div>
 
   <!-- <div class="field">
@@ -40,16 +40,22 @@
   <%= form.label :autolyse, "I'm a Supplier", :value => "Supplier"%>
   <%= form.radio_button :autolyse, false, :checked => true %>
 </div> -->
-<div class="field">
-  <%= form.label :Supplier_or_Restaurant_? %>
-  <%= form.text_field :role %>
+<div class="form-group">
+  <%= form.label :Supplier_or_Restaurant_? %><br>
+  <%#= form.text_field :role, class: 'form-control' %>
+  <%= form.radio_button :role, 'restaurant' %>
+  <%= form.label :role, "Restaurant", :value => "restaurant"%><br>
+  <%= form.radio_button :role, 'supplier' %>
+  <%= form.label :role, "Supplier", :value => "supplier"%>
+
 </div>
 
-  <div class="actions">
-    <a href="/home"><button type="submit">Sign Up</button></a>
+ 
+  <%= form.submit class: 'btn btn-primary' %>
 
     <!-- <%= form.submit %> -->
-  </div>
+  
   
 <% end %>
-<!-- <a href="products/index"><button type="submit">Sign Up</button></a> -->
+
+

@@ -5,15 +5,16 @@ Rails.application.routes.draw do
   resource :carts, only: [:show]
   resources :posts
   get '/receipt' => "pages#receipt"
-  get '/supplier' => "pages#supplier"
-
-
+  #get '/supplier' => "pages#supplier"
+  get '/about_us' => "pages#aboutus"
+  get '/contact_us' => "pages#contactus"
+  get '/logout' => "sessions#logout"
 
   root "admin#index"
 
 
   # get 'admin/index'
-  get 'sessions/create'
+  post 'sessions/create'
   get 'users/new'
 
 get '/create' => "sessions#create"
@@ -40,7 +41,7 @@ get '/supplier' => "supplier#index"
   controller :sessions do
     get 'login' => :new
     post 'login'=> :create
-    delete 'logout' => :destroy
+    #delete 'logout' => :destroy
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   end
 

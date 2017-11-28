@@ -1,84 +1,87 @@
-<%= form_for @product, html: { multipart: true} do |f| %>
- <ul class="form-product">
-    <li>
-	<div class="form-group">
-		<%= f.label :title, "Type" %>
-		<%= f.text_field :title, class: 'form-control' %>
-	</div>
-	</li>
-	<li>
+
+	<%= form_for @product, html: { multipart: true} do |f| %>
+	 <!-- <ul class="form-product">
+	    <li> -->
 		<div class="form-group">
-		<%= f.label :productbrand, "Brand" %>
-		<%= f.text_field :productbrand, class: 'form-control' %>
-	</div>
-	</li>
-	<li>
-	<div class="form-group">
-		<%= f.label :price, "Price" %>
-		<%= f.number_field :price, value: 1, class: 'form-control', min: 1 %>
-	</div>
-	</li>
-	<li>
-	<div class="form-group">
-		<%=	f.label :productiondate, "Production Date" %>
-		<%= f.date_field :productiondate %>
-	</div>
-	</li>
-	<li>
+			<%= f.label :title, "Type" %>
+			<%= f.text_field :title, class: 'form-control' %>
+		</div>
+		<!-- </li>
+		<li> -->
+			<div class="form-group">
+			<%= f.label :productbrand, "Brand" %>
+			<%= f.text_field :productbrand, class: 'form-control' %>
+		</div>
+		<!-- </li>
+		<li> -->
 		<div class="form-group">
-		<%=	f.label :date, "Expiration Date" %>
-		<%= f.date_field :date %>
-	</div>
-	</li>
-	<li>
+			<%= f.label :price, "Price" %>
+			<%= f.number_field :price, value: 1, class: 'form-control', min: 1 %>
+		</div>
+		<!-- </li>
+		<li> -->
 		<div class="form-group">
-		<%= f.label :unitsperpackage, "Unit per Package" %>
-		<%= f.number_field :unitsperpackage, value: 1, class: 'form-control', min: 1 %>
-	</div>
-	</li>
-	<li>
+			<%=	f.label :productiondate, "Production Date" %>
+			<%= f.date_field :productiondate %>
+		</div>
+		<!-- </li>
+		<li> -->
+			<div class="form-group">
+			<%=	f.label :date, "Expiration Date" %>
+			<%= f.date_field :date %>
+		</div>
+		<!-- </li>
+		<li> -->
+			<div class="form-group">
+			<%= f.label :unitsperpackage, "Unit per Package" %>
+			<%= f.number_field :unitsperpackage, value: 1, class: 'form-control', min: 1 %>
+		</div>
+		<!-- </li>
+		<li> -->
+			<div class="form-group">
+			<%= f.label :units, "Units" %>
+			<%= f.text_field :units, class: 'form-control' %>
+		</div>
+		<!-- </li>
+		<li> -->
 		<div class="form-group">
-		<%= f.label :units, "Units" %>
-		<%= f.text_field :units, class: 'form-control' %>
-	</div>
-	</li>
-	<li>
-	<div class="form-group">
-		<%= f.label :discount, "Discount%" %>
-		<%= f.number_field :discount, value: 1, class: 'form-control', min: 1 %>
-	</div>
-	</li>
-	<li>
+			<%= f.label :discount, "Discount%" %>
+			<%= f.number_field :discount, value: 1, class: 'form-control', min: 1 %>
+		</div>
+		<!-- </li>
+		<li> -->
+			<div class="form-group">
+			<%= f.label :productdiscription, "Discription" %>
+			<%= f.text_field :productdiscription, class: 'form-control' %>
+		</div>
+		<!-- </li>
+		<li> -->
+			<div class="form-group">
+			<%= f.label :deliverytime, "Delivery Time" %>
+			<%= f.text_field :deliverytime, class: 'form-control' %>
+		</div>
+		<!-- </li>
+		<li> -->
+			<div class="form-group">
+			<%= f.label :location, "Location" %>
+			<%= f.text_field :location, class: 'form-control' %>
+		</div>
+		<!-- </li>
+		<li> -->
 		<div class="form-group">
-		<%= f.label :productdiscription, "Discription" %>
-		<%= f.text_field :productdiscription, class: 'form-control' %>
-	</div>
-	</li>
-	<li>
-		<div class="form-group">
-		<%= f.label :deliverytime, "Delivery Time" %>
-		<%= f.text_field :deliverytime, class: 'form-control' %>
-	</div>
-	</li>
-	<li>
-		<div class="form-group">
-		<%= f.label :location, "Location" %>
-		<%= f.text_field :location, class: 'form-control' %>
-	</div>
-	</li>
-	<li>
-	<div class="form-group">
-		<%= f.label :supplyinstock, "Stock" %>
-		<%= f.number_field :supplyinstock, value: 1, class: 'form-control', min: 1 %>
-	</div>
-	</li>
-	<li class="file-choose">
-		<div class="form-group">
-		<%= f.label :image %>
-		<%= f.file_field :image %>
-	</div>
-	</li>
-	<li class="file-choose">
-	<%= f.submit "Save", class: 'btn btn-success btn-submit-product' %>
-	</li>
-<% end %>
+			<%= f.label :supplyinstock, "Stock" %>
+			<%= f.number_field :supplyinstock, value: 1, class: 'form-control', min: 1 %>
+		</div>
+		<!-- </li> -->
+		<span class="file-choose">
+			<div class="form-group">
+			<%= f.label :image %>
+			<%= f.file_field :image %>
+			</div>
+		</span>
+		<!-- </li> -->
+		<span class="file-choose">
+		 <%= f.submit "Save", class: 'btn btn-success btn-submit-product' %>
+		</span>
+	<% end %>
+

@@ -5,9 +5,26 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user =User.find_by(name: params[:name])
-    if user and user.authenticate(params[:password])
-      session[:user_id] = user.id
+    
+    check = User.find_by(email: params[:user][:email]).try(:authenticate, params[:user][:password]) 
+
+    if(check)
+      @user = User.find_by(email: params[:user][:email])
+      session[:user_id] = @user.id
+      redirect_to '/admin'
+    else
+
+      # if((@user.email == params[:user][:email]) && (@user.password == params[:user][:password]))
+      flash[:invalid1] = "1Invalid Username or Password"
+      redirect_to login_url
+   
+        
+    end   
+    # if(params[:user][:email])
+    # user =User.find_by(name: params[:name])
+    
+    # if user and user.authenticate(params[:password])
+    #   session[:user_id] = user.id
       # if user.role = "Restaurant"
       #   redirect_to orders_url
       # end
@@ -18,14 +35,17 @@ class SessionsController < ApplicationController
       #   redirect_to admin_url
       # end
 
-    else
-      redirect_to login_url, alert: "Invalid Username or Password"
+    # else
+    #   redirect_to login_url, alert: "Invalid Username or Password"
   end
-end
 
-  def destroy
+
+  def logout
     session[:user_id] = nil
-    redirect_to login_url, alert:"Successfully logged out"
+    flash[:invalid1] = "Successfully logged out"
+    redirect_to login_url
 
   end
+
+
 end

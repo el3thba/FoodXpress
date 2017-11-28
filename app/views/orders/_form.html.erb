@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :subtotal %>
-    <%= form.text_field :subtotal, id: :order_subtotal %>
+    <%= form.text_field :subtotal, id: :order_subtotal, :class=> 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :total %>
-    <%= form.text_field :total, id: :order_total %>
+    <%= form.text_field :total, id: :order_total, :class=> 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :discount %>
-    <%= form.text_field :discount, id: :order_discount %>
+    <%= form.text_field :discount, id: :order_discount, :class=> 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :shipping %>
-    <%= form.text_field :shipping, id: :order_shipping %>
+    <%= form.text_field :shipping, id: :order_shipping, :class=> 'form-control' %>
   </div>
 
   <div class="actions">

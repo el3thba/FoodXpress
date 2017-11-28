@@ -1,28 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Subtotal:</strong>
-  <%= @order.subtotal %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Total:</strong>
-  <%= @order.total %>
-</p>
+      <p>
+        <strong>Subtotal:</strong>
+        <%= @order.subtotal %>
+      </p>
 
-<p>
-  <strong>Discount:</strong>
-  <%= @order.discount %>
-</p>
+      <p>
+        <strong>Total:</strong>
+        <%= @order.total %>
+      </p>
 
-<p>
-  <strong>Price after discount:</strong>
-  <%= @order.total - (@order.total * @order.discount)/100 %>
-</p>
-<p>
-  <strong>Shipping:</strong>
-  <%= @order.shipping %>
-</p>
+      <p>
+        <strong>Discount:</strong>
+        <%= @order.discount %>
+      </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+      <p>
+        <strong>Price after discount:</strong>
+        
+      </p>
+      <p>
+        <strong>Shipping:</strong>
+        <%= @order.shipping %>
+      </p>
+
+      <%= link_to 'Edit', edit_order_path(@order) %> |
+      <%= link_to 'Back', orders_path %>
+
+    </div>
+  </div>
+  <br><br>
+</div>      

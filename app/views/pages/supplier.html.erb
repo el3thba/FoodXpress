@@ -1,58 +1,21 @@
-<!-- <h1>Admin#index</h1>
-<p>Find me in app/views/admin/index.html.erb</p> -->
-<!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-</style>
-<body class="xpress">
+<!-- 
+<div class="container">
 
-<!-- Navbar -->
-<div class="w3-top top-header">
-  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="admin" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="create" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Suppliers</a>
-    <a href="create" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Restaurants</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Us</a>
-    <a href="admin" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="margin-left: 300px;">Sign Out</a>
-
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Suppliers</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Restaurants</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
-  </div>
-</div>
-
-
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+  <div class="row">
+    
+    <div class="col-md-10">
       <h1>Carrefour</h1>
-      <h5 class="w3-padding-32">We strive to always provide the best quality and most diverse selection of household goods available in Qatar. Our value packs and combination discount offers means that we can offer these products at even lower costs, keeping your household essentials at unbeatable prices.</h5>
-      <div class="button" >
-        <a href="products"><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-white">View My Products</button></a>
-      </div>
+      <p>We strive to always provide the best quality and most diverse selection of household goods available in Qatar. Our value packs and combination discount offers means that we can offer these products at even lower costs, keeping your household essentials at unbeatable prices.</p>
+    </div>
 
-      <p class="w3-text-grey">
-         <div class="container">
-    <div class="row-fluid">
-    <div class="span4">
+    <div class="col-md-2">
+      <img src="http://www.carrefour.com/sites/all/themes/carrefourcom/images/Carrefour_logo_158x197.jpg" alt="Girl in a jacket">
+    </div>
+
+  </div>  
+
+  <div class="row">
+    <div class="col-md-12">
             <h2>Location and contact information</h2>
             <address>
                 <strong>Carfour</strong><br>
@@ -62,50 +25,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                 CT21 5SH<br>
                 <abbr title="Phone">P:</abbr> 01234 567 890
             </address>
-        </div>
-        <div class="span8">
-            <iframe width="155%" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=15+Springfield+Way,+Hythe,+CT21+5SH&aq=t&sll=52.8382,-2.327815&sspn=8.047465,13.666992&ie=UTF8&hq=&hnear=15+Springfield+Way,+Hythe+CT21+5SH,+United+Kingdom&t=m&z=14&ll=51.077429,1.121722&output=embed"></iframe>
-        </div>
-
-
-    </div>
-</div>
-      </p>
-    </div>
-
-    <div class="w3-third w3-center">
-       <img src="http://www.carrefour.com/sites/all/themes/carrefourcom/images/Carrefour_logo_158x197.jpg" alt="Girl in a jacket">
-
     </div>
   </div>
+  
+  <a href="/products" class="btn btn-primary">View Products</a> 
+  <br><br>
+    
+  <div class="row"> 
+    <div class="col-md-8">
+      <iframe width="155%" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=15+Springfield+Way,+Hythe,+CT21+5SH&aq=t&sll=52.8382,-2.327815&sspn=8.047465,13.666992&ie=UTF8&hq=&hnear=15+Springfield+Way,+Hythe+CT21+5SH,+United+Kingdom&t=m&z=14&ll=51.077429,1.121722&output=embed"></iframe>
+    </div>
+  </div>    
+
+
+  <br><br>
+    
+    
+ 
+
+
 </div>
 
 
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">
-  <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
-</body>
-</html>
+ -->

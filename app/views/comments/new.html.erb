@@ -1,0 +1,23 @@
+<h1>New Post</h1>
+
+<%= render 'form', comment: @comment %>
+
+<%= link_to 'Back', comments_path %>
+<br>
+<br>
+<a href="/comments"><button class="button" style="vertical-align:middle, background-color: green "><span>View Comments </span></button></a>
+
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    width:100px;
+    height:50px;
+    color: white;
+    border-radius: 8px;
+    
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+  </style>

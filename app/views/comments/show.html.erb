@@ -1,0 +1,12 @@
+
+<div>Restaurant Name: <%= @comment.name %></div>
+<div>
+ Comment: <%= @comment.body %>
+</div>
+a: <%= @comment.image.url(:thumb) %>
+
+<br>
+
+<br>
+<%=link_to "Edit", edit_comment_path(@comment) %>
+<%=link_to "Delete", comment_path(@comment), method: :delete, data: { confirm: "Are you sure"} %>

@@ -1,114 +1,1008 @@
-<!-- <h1>Admin#index</h1>
-<p>Find me in app/views/admin/index.html.erb</p> -->
-<!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-</style>
-<body class="xpress">
 
-<!-- Navbar -->
-<div class="w3-top top-header">
-  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="admin" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="create" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Suppliers</a>
-    <a href="create" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Restaurants</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Us</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="create" class="w3-bar-item w3-button w3-padding-large">Suppliers</a>
-    <a href="create" class="w3-bar-item w3-button w3-padding-large">Restaurants</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-container w3-orange w3-center" style="background-color: #46A27C !important; margin-bottom: 20px;" >
-<div class="img-tag-div">
-  <!-- <h1 class="w3-margin w3-jumbo food-h1">FoodXpress</h1> -->
-  <%= image_tag("abc1.png", :alt => "logo", :class => "img-logo") %>
-   <h1 class="w3-margin w3-jumbo food-h1">Your platform to reducing food supply waste<br> while catering to your urgent food supply needs</h1>
-</div>
-  <div class="btn-login">
-
-    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-white" ><a style="color:white!important;" href="create">Login</a></button>
-      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-white" ><a style="color:white!important;" href="new">Sign Up</a></button></div>
-</header>
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content content-grid">
-      <div class="w3-third w3-center xpress-img">
-      <!-- <i class="fa fa-anchor w3-padding-64 w3-text-black"></i> -->
-      <%= image_tag("food.jpg", :alt => "food") %>
-    </div>
-    <div class="w3-twothird content-data">
-      <h1>Find The Necessary Supplies When You Need Them Here!</h1>
-      <h5 class="w3-padding-32">Our mission is to help reduce food supply waste in Qatar. Our main aim consumer or target audience is small scale suppliers and small business owners. We want to connect restaurants and suppliers to one another to help communicate their needs to each other. Suppliers want to ensure that food supplies are used before they’re wasted and restaurants are always running out of food supply and need to get them quickly. Through our platform, suppliers can help sell their near to expiry supplies and restaurants can get food supply delivery of the item they’re looking for quickly.</h5>
-    </div>
+<!-- <div class="jumbotron  js--add-gradient">
+  <div class="container">
+    <div class="jumbotron__container">
+      <h2 class="jumbotron__subtitle">
+        Your platform to reducing food supply waste<br> while catering to your urgent food supply needs
+      </h2>
+      <h1 class="jumbotron__title">
+        XPRESS FOOD SUPPLY
+      </h1> -->
 
 
-  </div>
-</div>
+      <div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
+    </ol>
 
-<!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container theme-backgroud">
-  <div class="w3-content content-grid">
-
-
-    <div class="w3-twothird content-data">
-      <h1>HOT DEALS!</h1>
-      <h1 class="w3-padding-32">Here is the current hot deal on the table make sure to grab it before it's gone.</h1>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+                <img src="/assets/Xfood5.png" alt="aaa"  >
 
       </div>
-    <div class="w3-third w3-center xpress-img">
-      <!-- <i class="fa fa-coffee w3-padding-64 w3-text-orange w3-margin-right"></i> -->
-      <%= image_tag("food2.jpg", :alt => "logo") %>
+
+      <div class="item">
+   <img src="/assets/fff.png" alt="Chicago" >
+         </div>
+
+     <!--  <div class="item">
+        <img src="ny.jpg" alt="New York">
+      </div> -->
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</div>
+
+     <!--  <a class="btn  btn-warning" href="http://themeforest.net/item/organique-html-template-for-healthy-food-store/6779086?ref=ProteusThemes" target="_blank">Buy theme</a> &nbsp;
+      <a class="btn  btn-jumbotron" href="features.html">More details</a> -->
     </div>
   </div>
 </div>
+<div class="banners  push-down-30">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12  col-sm-6  col-md-3">
+        <div class="banners-box">
+          <span class="glyphicon glyphicon-earphone glyphicon--banners"></span>
+          <b class="banners__title">CALL US ANYTIME</b>
+          +386 31 567 537
+        </div>
+      </div>
+      <div class="col-xs-12  col-sm-6  col-md-3">
+        <div class="banners-box">
+          <span class="glyphicon glyphicon-road glyphicon--banners"></span>
+          <b class="banners__title">FAST DELIVERY</b>
+          Anywhere in Qatar
+        </div>
+      </div>
+      <div class="col-xs-12  col-sm-6  col-md-3">
+        <div class="banners-box">
+          <span class="glyphicon glyphicon-credit-card glyphicon--banners"></span>
+          <b class="banners__title">PAYMENT METHODS</b>
+          Credit cards, Paypal ...
+        </div>
+      </div>
+      <div class="col-xs-12  col-sm-6  col-md-3">
+        <div class="banners-box">
+          <span class="glyphicon glyphicon-leaf glyphicon--banners"></span>
+          <b class="banners__title">MADE WITH LOVE</b>
+          To mother nature
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <!-- Navigation for products -->
 
-<!-- <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+
+<!-- Products -->
+<div id="js--latest-products-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+    <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    
+    <div class="item active">
+      <div class="row">
+            
+                   
+ <%= image_tag "1.png", :size => "750x150", :class => "style_image" %>
+ <style>
+.style_image{
+  padding:10px;
+}
+</style>
+
+
+                
+                  
+                  
+                  
+       <!--  <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-7" data-price="6.9" data-rating="3">
+          <div class="products__single">
+            <figure class="products__image">
+              <a href="single-product.html">
+                <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/14.jpg">
+              </a>
+              <div class="product-overlay">
+                <a class="product-overlay__more" href="single-product.html">
+                  <span class="glyphicon glyphicon-search"></span>
+                </a>
+                <a class="product-overlay__cart" href="#">
+                  +<span class="glyphicon glyphicon-shopping-cart"></span>
+                </a>
+                <div class="product-overlay__stock">
+                  <span class="in-stock">&bull;</span> <span class="in-stock--text">In stock</span>
+                </div>
+              </div>
+            </figure>
+            <div class="row">
+              <div class="col-xs-9">
+                <h5 class="products__title">
+                  <a class="products__link  js--isotope-title" href="single-product.html">Eatable Hemp</a>
+                </h5>
+              </div>
+              <div class="col-xs-3">
+                <div class="products__price">
+                  $6.9
+                </div>
+              </div>
+            </div>
+            <div class="products__category">
+              Other
+            </div>
+          </div>
+        </div>
+                  
+                
+        <div class="clearfix visible-xs"></div> 
+                  
+                  
+        <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-7" data-price="14.95" data-rating="4">
+          <div class="products__single">
+            <figure class="products__image">
+              <a href="single-product.html">
+                <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/24.jpg">
+              </a>
+              <div class="product-overlay">
+                <a class="product-overlay__more" href="single-product.html">
+                  <span class="glyphicon glyphicon-search"></span>
+                </a>
+                <a class="product-overlay__cart" href="#">
+                  +<span class="glyphicon glyphicon-shopping-cart"></span>
+                </a>
+                <div class="product-overlay__stock">
+                  <span class="in-stock">&bull;</span> <span class="in-stock--text">In stock</span>
+                </div>
+              </div>
+            </figure>
+            <div class="row">
+              <div class="col-xs-9">
+                <h5 class="products__title">
+                  <a class="products__link  js--isotope-title" href="single-product.html">Polnozrnati Svedri</a>
+                </h5>
+              </div>
+              <div class="col-xs-3">
+                <div class="products__price">
+                  $14.95
+                </div>
+              </div>
+            </div>
+            <div class="products__category">
+              Other
+            </div>
+          </div>
+        </div>
+                  
+                
+                  
+                  
+                  
+        <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-5" data-price="2.98" data-rating="3">
+          <div class="products__single">
+            <figure class="products__image">
+              <a href="single-product.html">
+                <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/22.jpg">
+              </a>
+              <div class="product-overlay">
+                <a class="product-overlay__more" href="single-product.html">
+                  <span class="glyphicon glyphicon-search"></span>
+                </a>
+                <a class="product-overlay__cart" href="#">
+                  +<span class="glyphicon glyphicon-shopping-cart"></span>
+                </a>
+                <div class="product-overlay__stock">
+                  <span class="in-stock">&bull;</span> <span class="in-stock--text">In stock</span>
+                </div>
+              </div>
+            </figure>
+            <div class="row">
+              <div class="col-xs-9">
+                <h5 class="products__title">
+                  <a class="products__link  js--isotope-title" href="single-product.html">Bio Muesli Traditional</a>
+                </h5>
+              </div>
+              <div class="col-xs-3">
+                <div class="products__price">
+                  $2.98
+                </div>
+              </div>
+            </div>
+            <div class="products__category">
+              Muesli
+            </div>
+          </div>
+        </div>
+              
+            
+        <div class="clearfix visible-xs"></div>  -->
+              
+      </div>
+    </div>
+    
+    <!-- commenting out four products that were swapping out -->
+    
+    <!-- <div class="item">
+      <div class="row">
+              
+              
+        <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-6" data-price="16.88" data-rating="4">
+          <div class="products__single">
+            <figure class="products__image">
+              <a href="single-product.html">
+                <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/16.jpg">
+              </a>
+              <div class="product-overlay">
+                <a class="product-overlay__more" href="single-product.html">
+                  <span class="glyphicon glyphicon-search"></span>
+                </a>
+                <a class="product-overlay__cart" href="#">
+                  +<span class="glyphicon glyphicon-shopping-cart"></span>
+                </a>
+                <div class="product-overlay__stock">
+                  <span class="in-stock">&bull;</span> <span class="in-stock--text">In stock</span>
+                </div>
+              </div>
+            </figure>
+            <div class="row">
+              <div class="col-xs-9">
+                <h5 class="products__title">
+                  <a class="products__link  js--isotope-title" href="single-product.html">High Protein Diet Mango</a>
+                </h5>
+              </div>
+              <div class="col-xs-3">
+                <div class="products__price">
+                  $16.88
+                </div>
+              </div>
+            </div>
+            <div class="products__category">
+              Natural Proteins
+            </div>
+          </div>
+        </div>
+                  
+                
+                  
+                  
+                  
+        <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-3" data-price="6.18" data-rating="4">
+          <div class="products__single">
+            <figure class="products__image">
+              <a href="single-product.html">
+                <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/7.jpg">
+              </a>
+              <div class="product-overlay">
+                <a class="product-overlay__more" href="single-product.html">
+                  <span class="glyphicon glyphicon-search"></span>
+                </a>
+                <a class="product-overlay__cart" href="#">
+                  +<span class="glyphicon glyphicon-shopping-cart"></span>
+                </a>
+                <div class="product-overlay__stock">
+                  <span class="in-stock">&bull;</span> <span class="in-stock--text">In stock</span>
+                </div>
+              </div>
+            </figure>
+            <div class="row">
+              <div class="col-xs-9">
+                <h5 class="products__title">
+                  <a class="products__link  js--isotope-title" href="single-product.html">Bio Apricot Kernels</a>
+                </h5>
+              </div>
+              <div class="col-xs-3">
+                <div class="products__price">
+                  $6.18
+                </div>
+              </div>
+            </div>
+            <div class="products__category">
+              Bio
+            </div>
+          </div>
+        </div>
+                  
+                
+        <div class="clearfix visible-xs"></div> 
+                  
+                  
+        <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-2" data-price="13.71" data-rating="5">
+          <div class="products__single">
+            <figure class="products__image">
+              <a href="single-product.html">
+                <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/8.jpg">
+              </a>
+              <div class="product-overlay">
+                <a class="product-overlay__more" href="single-product.html">
+                  <span class="glyphicon glyphicon-search"></span>
+                </a>
+                <a class="product-overlay__cart" href="#">
+                  +<span class="glyphicon glyphicon-shopping-cart"></span>
+                </a>
+                <div class="product-overlay__stock">
+                  <span class="out-of-stock">&bull;</span> <span class="in-stock--text">Out of stock</span>
+                </div>
+              </div>
+            </figure>
+            <div class="row">
+              <div class="col-xs-9">
+                <h5 class="products__title">
+                  <a class="products__link  js--isotope-title" href="single-product.html">Bio Acai Powder</a>
+                </h5>
+              </div>
+              <div class="col-xs-3">
+                <div class="products__price">
+                  $13.71
+                </div>
+              </div>
+            </div>
+            <div class="products__category">
+              Powders
+            </div>
+          </div>
+        </div>
+                  
+                
+                              
+                  
+        <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-4" data-price="7.47" data-rating="5">
+          <div class="products__single">
+            <figure class="products__image">
+              <a href="single-product.html">
+                <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/9.jpg">
+              </a>
+              <div class="product-overlay">
+                <a class="product-overlay__more" href="single-product.html">
+                  <span class="glyphicon glyphicon-search"></span>
+                </a>
+                <a class="product-overlay__cart" href="#">
+                  +<span class="glyphicon glyphicon-shopping-cart"></span>
+                </a>
+                <div class="product-overlay__stock">
+                  <span class="in-stock">&bull;</span> <span class="in-stock--text">In stock</span>
+                </div>
+              </div>
+            </figure>
+            <div class="row">
+              <div class="col-xs-9">
+                <h5 class="products__title">
+                  <a class="products__link  js--isotope-title" href="single-product.html">Chia Seed</a>
+                </h5>
+              </div>
+              <div class="col-xs-3">
+                <div class="products__price">
+                  $7.47
+                </div>
+              </div>
+            </div>
+            <div class="products__category">
+              Seed
+            </div>
+          </div>
+        </div>
+                   
+      </div>
+    </div> -->
+
+
+  </div>
+</div>
+  <!-- Banners medium -->
+<!-- <div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <a href="shop.html">
+      <div class="banners--medium">
+        <span class="banners-text">New arrivals in <strong>Mashrooms &amp; Fungus</strong> category</span>
+        <span class="glyphicon  glyphicon-circle  glyphicon-chevron-right"></span>
+      </div>
+    </a>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <a href="shop.html">
+      <div class="banners--medium">
+        <span class="banners-text">Up to 35% off in <strong>Sandwiches</strong> category</span>
+        <span class="glyphicon  glyphicon-circle  glyphicon-chevron-right"></span>
+      </div>
+    </a>
+  </div>
+</div> -->
+  <!-- Navigation -->
+<div class="products-navigation  push-down-15">
+  <div class="products-navigation__title">
+    <h3><span class="light">Buy</span> Food Today and Prevent Tomorrow's Waste</h3>
+  </div>
+</div>
+
+
+<!-- Products -->
+<div class="row">
+  
+    
+    
+<% @products.each do |product| %>
+  <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-2" data-price="14.36" data-rating="4">
+    <div class="products__single">
+      <figure class="products__image">
+        <a href="/products/<%= product.id %>">
+        <%= image_tag product.image.url(:thumb), :class=> "product__image", :width=> "263", :height=>"334" %>
+          <!-- <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/2.jpg"> -->
+        </a>
+        <div class="product-overlay">
+          <a class="product-overlay__more" href="single-product.html">
+            <span class="glyphicon glyphicon-search"></span>
+          </a>
+          <a class="product-overlay__cart" href="/home">
+            +<span class="glyphicon glyphicon-shopping-cart"></span>
+          </a>
+          <div class="product-overlay__stock">
+            <span class="in-stock">&bull;</span> <span class="in-stock--text"><%= product.unitsperpackage %></span>
+          </div>
+        </div>
+      </figure>
+      <div class="row">
+        <div class="col-xs-9">
+          <h5 class="products__title">
+            <a class="products__link  js--isotope-title" href="/home"><%= product.title %></a>
+          </h5>
+        </div>
+        <div class="col-xs-3">
+          <div class="products__price">
+            QAR<%= product.price - (product.price * product.discount)/100 %>
+           Discount:<%= product.discount %>%
+
+          </div>
+        </div>
+      </div>
+      <div class="products__category">
+        <%= product.productbrand %>
+      </div>
+       <div class="products__category">
+        Production Date: <%= product.productiondate %>
+      </div>
+      <div class="products__category">
+        Expiration Date: <%= product.date %>
+      </div>
+    </div>
+  </div>
+
+<% end %>  
+      
+    
+      
+      
+      
+  <!-- <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-2" data-price="13.23" data-rating="4">
+    <div class="products__single">
+      <figure class="products__image">
+        <a href="single-product.html">
+          <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/4.jpg">
+        </a>
+        <div class="product-overlay">
+          <a class="product-overlay__more" href="single-product.html">
+            <span class="glyphicon glyphicon-search"></span>
+          </a>
+          <a class="product-overlay__cart" href="#">
+            +<span class="glyphicon glyphicon-shopping-cart"></span>
+          </a>
+          <div class="product-overlay__stock">
+            <span class="out-of-stock">&bull;</span> <span class="in-stock--text">Out of stock</span>
+          </div>
+        </div>
+      </figure>
+      <div class="row">
+        <div class="col-xs-9">
+          <h5 class="products__title">
+            <a class="products__link  js--isotope-title" href="single-product.html">Bio Barley Powder</a>
+          </h5>
+        </div>
+        <div class="col-xs-3">
+          <div class="products__price">
+            $13.23
+          </div>
+        </div>
+      </div>
+      <div class="products__category">
+        Powders
+      </div>
+    </div>
+  </div>
+      
+    
+       <div class="clearfix visible-xs"></div> 
+      
+      
+  <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-3" data-price="8.22" data-rating="3">
+    <div class="products__single">
+      <figure class="products__image">
+        <a href="single-product.html">
+          <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/6.jpg">
+        </a>
+        <div class="product-overlay">
+          <a class="product-overlay__more" href="single-product.html">
+            <span class="glyphicon glyphicon-search"></span>
+          </a>
+          <a class="product-overlay__cart" href="#">
+            +<span class="glyphicon glyphicon-shopping-cart"></span>
+          </a>
+          <div class="product-overlay__stock">
+            <span class="out-of-stock">&bull;</span> <span class="in-stock--text">Out of stock</span>
+          </div>
+        </div>
+      </figure>
+      <div class="row">
+        <div class="col-xs-9">
+          <h5 class="products__title">
+            <a class="products__link  js--isotope-title" href="single-product.html">Bio Ashwagandha Powder</a>
+          </h5>
+        </div>
+        <div class="col-xs-3">
+          <div class="products__price">
+            $8.22
+          </div>
+        </div>
+      </div>
+      <div class="products__category">
+        Bio
+      </div>
+    </div>
+  </div>
+      
+    
+      
+      
+      
+  <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-2" data-price="13.71" data-rating="5">
+    <div class="products__single">
+      <figure class="products__image">
+        <a href="single-product.html">
+          <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/8.jpg">
+        </a>
+        <div class="product-overlay">
+          <a class="product-overlay__more" href="single-product.html">
+            <span class="glyphicon glyphicon-search"></span>
+          </a>
+          <a class="product-overlay__cart" href="#">
+            +<span class="glyphicon glyphicon-shopping-cart"></span>
+          </a>
+          <div class="product-overlay__stock">
+            <span class="out-of-stock">&bull;</span> <span class="in-stock--text">Out of stock</span>
+          </div>
+        </div>
+      </figure>
+      <div class="row">
+        <div class="col-xs-9">
+          <h5 class="products__title">
+            <a class="products__link  js--isotope-title" href="single-product.html">Bio Acai Powder</a>
+          </h5>
+        </div>
+        <div class="col-xs-3">
+          <div class="products__price">
+            $13.71
+          </div>
+        </div>
+      </div>
+      <div class="products__category">
+        Powders
+      </div>
+    </div>
+  </div>
+      
+    
+       <div class="clearfix visible-xs"></div> --> 
+      
+</div>
+
+
+<!-- Row no 2 for featured items -->
+
+<!-- <div class="row">
+      
+      
+    <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-3" data-price="4.61" data-rating="5">
+      <div class="products__single">
+        <figure class="products__image">
+          <a href="single-product.html">
+            <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/12.jpg">
+          </a>
+          <div class="product-overlay">
+            <a class="product-overlay__more" href="single-product.html">
+              <span class="glyphicon glyphicon-search"></span>
+            </a>
+            <a class="product-overlay__cart" href="#">
+              +<span class="glyphicon glyphicon-shopping-cart"></span>
+            </a>
+            <div class="product-overlay__stock">
+              <span class="in-stock">&bull;</span> <span class="in-stock--text">In stock</span>
+            </div>
+          </div>
+        </figure>
+        <div class="row">
+          <div class="col-xs-9">
+            <h5 class="products__title">
+              <a class="products__link  js--isotope-title" href="single-product.html">Bio Murve</a>
+            </h5>
+          </div>
+          <div class="col-xs-3">
+            <div class="products__price">
+              $4.61
+            </div>
+          </div>
+        </div>
+        <div class="products__category">
+          Bio
+        </div>
+      </div>
+    </div>
+        
+      
+        
+        
+        
+    <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-7" data-price="6.9" data-rating="3">
+      <div class="products__single">
+        <figure class="products__image">
+          <a href="single-product.html">
+            <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/14.jpg">
+          </a>
+          <div class="product-overlay">
+            <a class="product-overlay__more" href="single-product.html">
+              <span class="glyphicon glyphicon-search"></span>
+            </a>
+            <a class="product-overlay__cart" href="#">
+              +<span class="glyphicon glyphicon-shopping-cart"></span>
+            </a>
+            <div class="product-overlay__stock">
+              <span class="in-stock">&bull;</span> <span class="in-stock--text">In stock</span>
+            </div>
+          </div>
+        </figure>
+        <div class="row">
+          <div class="col-xs-9">
+            <h5 class="products__title">
+              <a class="products__link  js--isotope-title" href="single-product.html">Eatable Hemp</a>
+            </h5>
+          </div>
+          <div class="col-xs-3">
+            <div class="products__price">
+              $6.9
+            </div>
+          </div>
+        </div>
+        <div class="products__category">
+          Other
+        </div>
+      </div>
+    </div>
+        
+      
+    <div class="clearfix visible-xs"></div> 
+        
+        
+    <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-6" data-price="16.88" data-rating="4">
+      <div class="products__single">
+        <figure class="products__image">
+          <a href="single-product.html">
+            <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/16.jpg">
+          </a>
+          <div class="product-overlay">
+            <a class="product-overlay__more" href="single-product.html">
+              <span class="glyphicon glyphicon-search"></span>
+            </a>
+            <a class="product-overlay__cart" href="#">
+              +<span class="glyphicon glyphicon-shopping-cart"></span>
+            </a>
+            <div class="product-overlay__stock">
+              <span class="in-stock">&bull;</span> <span class="in-stock--text">In stock</span>
+            </div>
+          </div>
+        </figure>
+        <div class="row">
+          <div class="col-xs-9">
+            <h5 class="products__title">
+              <a class="products__link  js--isotope-title" href="single-product.html">High Protein Diet Mango</a>
+            </h5>
+          </div>
+          <div class="col-xs-3">
+            <div class="products__price">
+              $16.88
+            </div>
+          </div>
+        </div>
+        <div class="products__category">
+          Natural Proteins
+        </div>
+      </div>
+    </div>
+        
+      
+        
+        
+        
+    <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-6" data-price="16.91" data-rating="5">
+      <div class="products__single">
+        <figure class="products__image">
+          <a href="single-product.html">
+            <img alt="#" class="product__image" width="263" height="334" src="images/dummy/w263/18.jpg">
+          </a>
+          <div class="product-overlay">
+            <a class="product-overlay__more" href="single-product.html">
+              <span class="glyphicon glyphicon-search"></span>
+            </a>
+            <a class="product-overlay__cart" href="#">
+              +<span class="glyphicon glyphicon-shopping-cart"></span>
+            </a>
+            <div class="product-overlay__stock">
+              <span class="out-of-stock">&bull;</span> <span class="in-stock--text">Out of stock</span>
+            </div>
+          </div>
+        </figure>
+        <div class="row">
+          <div class="col-xs-9">
+            <h5 class="products__title">
+              <a class="products__link  js--isotope-title" href="single-product.html">High Protein Diet Asparagus</a>
+            </h5>
+          </div>
+          <div class="col-xs-3">
+            <div class="products__price">
+              $16.91
+            </div>
+          </div>
+        </div>
+        <div class="products__category">
+          Natural Proteins
+        </div>
+      </div>
+    </div>
+    
+  
 </div> -->
 
-<!-- Footer -->
-<footer class="w3-container w3-center w3-opacity">
-  <div class="w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+  <!-- Banners big -->
+<div class="banners--big  banners--big-left">
+  <div class="row">
+    <div class="col-xs-12  col-md-7">
+      <div class="banners--big__text">
+        Sign up on newsletter for more information about <strong>XPRESS FOOD SUPPLY</strong>
+      </div>
+    </div>
+    <div class="col-xs-12  col-md-5">
+      <div class="banners--big__form">
+        <form action="//proteusthemes.us4.list-manage.com/subscribe/post?u=ea0786485977f5ec8c9283d5c&amp;id=5dad3f35e9" method="post" name="mc-embedded-subscribe-form" role="form" target="_blank">
+          <div class="form-group  form-group--form">
+            <input type="email" name="EMAIL" class="form-control  form-control--form" placeholder="Enter your E-mail address" required>
+            <button class="btn  btn-primary" type="">Sign up now</button>
+          </div>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_ea0786485977f5ec8c9283d5c_5dad3f35e9" value=""></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="widgets__navigation">
+      <div class="widgets__heading--line">
+        <h4 class="widgets__heading">Top Rated Products</h4>
+      </div>
+      
+  
+  <div class="push-down-20  clearfix">
+    <a href="single-product.html">
+      <img alt="" class="widgets__products" width="78" height="78" src="/assets/1.jpg">
+    </a>
+    <h5 class="products__title">
+      <a class="products__link" href="/home">Orange Flavoured Raw Cacao Bar</a>
+    </h5>
+    <span class="line-through">$11.25</span> <span class="products__price--widgets">$8.25</span>
+    <br><br>
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+  </div>
+  
 
-</body>
-</html>
+  
+  <div class="push-down-20  clearfix">
+    <a href="single-product.html">
+      <img alt="" class="widgets__products" width="78" height="78" src="/assets/5.jpg">
+    </a>
+    <h5 class="products__title">
+      <a class="products__link" href="/home">Alfalfa Leaf Powder</a>
+    </h5>
+    <span class="line-through">$14.63</span> <span class="products__price--widgets">$11.63</span>
+    <br><br>
+
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+  </div>
+  
+
+  
+  <div class="push-down-20  clearfix">
+    <a href="single-product.html">
+      <img alt="" class="widgets__products" width="78" height="78" src="/assets/7.jpg">
+    </a>
+    <h5 class="products__title">
+      <a class="products__link" href="/home">Bio Apricot Kernels</a>
+    </h5>
+    <span class="line-through">$9.18</span> <span class="products__price--widgets">$6.18</span>
+    <br><br>
+
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-on"></span>
+    
+    <span class="glyphicon glyphicon-star  star-off"></span>
+    
+  </div>
+  
+
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <div class="widgets__navigation">
+      <div class="widgets__heading--line">
+        <h4 class="widgets__heading">Bestsellers</h4>
+      </div>
+      
+  
+  <div class="clearfix  push-down-15">
+    <a href="single-product.html">
+      <img alt="" class="widgets__products" width="78" height="78" src="/assets/8.jpg">
+    </a>
+    <div class="products__title">
+      <a class="products__link" href="/home">Bio Acai Powder</a>
+    </div>
+    <span class="line-through">$16.71</span> <span class="products__price--widgets">$13.71</span>
+    <br><br>
+    <div class="products__category">
+      Powders
+    </div>
+  </div>
+  
+
+  
+  <div class="clearfix  push-down-15">
+    <a href="single-product.html">
+      <img alt="" class="widgets__products" width="78" height="78" src="/assets/18.jpg">
+    </a>
+    <div class="products__title">
+      <a class="products__link" href="/home">High Protein Diet Asparagus</a>
+    </div>
+    <span class="line-through">$19.91</span> <span class="products__price--widgets">$16.91</span>
+    <br><br>
+    <div class="products__category">
+      Natural Proteins
+    </div>
+  </div>
+  
+
+  
+  <div class="clearfix  push-down-15">
+    <a href="single-product.html">
+      <img alt="" class="widgets__products" width="78" height="78" src="/assets/24.jpg">
+    </a>
+    <div class="products__title">
+      <a class="products__link" href="/home">Polnozrnati Svedri</a>
+    </div>
+    <span class="line-through">$17.95</span> <span class="products__price--widgets">$14.95</span>
+    <br><br>
+    <div class="products__category">
+      Other
+    </div>
+  </div>
+  
+
+
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <div class="widgets__navigation">
+      <div class="widgets__heading--line">
+        <h4 class="widgets__heading">Supplier of the month</h4>
+      </div>
+      <img alt="#" class="product__image" src="/assets/rr.png" width="353" height="186">
+      <div class="products__title">
+      <div class="push-down-10"></div>
+       <!--  Delicious organic big-ecologic sandwich -->
+      </div>
+      <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est purus, fringilla sit amet arcu quis, feugiat ultrices metus. Vestibulum lorem dolor, pharetra sit amet urna nec, hendrerit scelerisque risus. -->
+    </div>
+  </div>
+</div>
+</div>
+<div class="testimonials  light-paper-pattern">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3  hidden-xs">
+        <div class="testimonials__quotes">
+          <img alt="#" class="testimonials__quotes--img" src="/assets/quotes.png">
+        </div>
+      </div>
+      <div class="col-xs-12  col-sm-6">
+        <a href="#js--testimonails-carousel" data-slide="prev"><span class="glyphicon  glyphicon-circle  glyphicon-chevron-left"></span></a>
+        <h4 class="testimonials__title"><span class="light">Others</span> About Us</h4>
+        <a href="#js--testimonails-carousel" data-slide="next"><span class="glyphicon  glyphicon-circle  glyphicon-chevron-right"></span></a>
+        <hr class="divider-dark">
+        <div id="js--testimonails-carousel" class="carousel  slide" data-ride="carousel" data-interval="5000">
+          <div class="carousel-inner">
+            <div class="item  active">
+              <q class="testimonials__text">Your platform to reducing food supply waste
+while catering to your urgent food supply needs</q><br><br>
+              <cite><b></b></cite> 
+            </div>
+            <div class="item">
+              <q class="testimonials__text">THANKS! I really appreciate the FAST service of Xpress Food Supply! Really Really Happy with the sustainable change in my market! Thanks again.</q><br><br>
+              <cite><b>Al-Meera,</b></cite> Xpress Food Supply user
+            </div>
+            <div class="item">
+              <q class="testimonials__text">Great website, perfect for managing my waste. Very good user interface and easy to use.</q><br><br>
+              <cite><b>Carrefour,</b></cite> Xpress Food Supply user
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3  hidden-xs">
+        <div class="testimonials__quotes--rotate">
+          <img alt="#" class="testimonials__quotes--img" src="images/quotes.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="search-mode__overlay"></div>
+    
+    
+    <script data-main="scripts/main" src="/assets/require.js"></script>
+    
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-33538073-8', 'proteusthemes.com');
+      ga('send', 'pageview');
+
+    </script>
+  

@@ -2,6 +2,8 @@ class HomeController < ApplicationController
   def index
   	@products = Product.where(["title LIKE ?","%#{params[:search]}%"])
   	@order_item = current_order.order_items.new
+  	@products = Product.all.order("date ASC")
+
   end
   	def current_order
 		 if !session[:order_id].nil?

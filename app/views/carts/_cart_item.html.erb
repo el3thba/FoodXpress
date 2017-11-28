@@ -5,43 +5,54 @@
 		<% end %>
 	</ul>
 <% end %>
+<%= link_to "#{current_order.order_items.size} items in card and price #{current_order.method_name}", carts_path %>
 
 <% if @order_items.size>0 %>
 	<% @order_items.each do |item| %>
-		<div class="well cart-item">
+		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 cart-product">
+			<br><br>
+			<div class="col-md-2"></div>
+				<div class="col-md-4">
+					<%= image_tag item.product.image.url(:thumb), :class=> "js--product-preview", :width=> "250", :height=>"250" %>
 					<h3><%= item.product.title %></h3>
-					<h5>Left Stock:<%= item.product.supplyinstock - item.quantity %> </h5>
+					<p><h5>Left Stock:</h5><%= item.product.supplyinstock - item.quantity %></p>
 					<h5>Delivery urgency</h5>
 					<form>
-  <input type="radio" name="gender" value="male" checked> Normal: 2+ hours<br>
-  <input type="radio" name="gender" value="female"> Fast: 1 hours <br>
-  <input type="radio" name="gender" value="other"> Urgent: 30 minutes or less
-</form>
+
+					  <input type="radio" name="gender" value="male" checked> Normal: 2+ hours<br>
+					  <input type="radio" name="gender" value="female"> Fast: 1 hours <br>
+					  <input type="radio" name="gender" value="other"> Urgent: 30 minutes or less
+					</form>
 
 				</div>
-				<div class="col-sm-6 cart-product">
+				<br><br>
+				<div class="col-md-6">
 					<div class="pull-product">
-					<%= form_for(item, remote: true) do |f| %>
-						<%= f.hidden_field :product_id, value: item.product.id %>
-						<h5><%= item.product.price %></h5>
-						<div class="form-group">
-							<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
-						</div>
-			<div class="btn-group">
-							<%= f.submit "Update Quantity", class: 'btn btn-primary btn-quantity' %>
-							<%= link_to "Delete", item, method: :delete, remote: true, class: 'btn btn-danger'  %>
-						</div>
-						<span class="total-price">Total Price: <%= item.TotalPrice %></span>
-					<% end %>
-					<td>TotalPriceAfterDiscount <%= item.TotalPrice - (item.TotalPrice * item.product.discount)/100 %></td>
+						<%= form_for(item, remote: true) do |f| %>
+							<%= f.hidden_field :product_id, value: item.product.id %>
+							<h5><%= item.product.price %></h5>
+							<div class="form-group">
+								<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
+							</div>
+
+							<div class="btn-group">
+								<%= f.submit "Update Quantity", class: 'btn btn-primary btn-quantity' %>
+								<%= link_to "Delete", item, method: :delete, remote: true, class: 'btn btn-danger'  %>
+							</div><br>
+							<span class="total-price">Total Price Before Discounts: <%= item.TotalPrice %></span>
+						<% end %>
+						<br>
+						<td><b>Total Price After Discount </b> <%= item.TotalPrice - (item.TotalPrice * item.product.discount)/100 %>
+						</td>
 
 					</div>
+
 				</div>
 			</div>
-		</div>
+		
 	<% end %>
+	
 <% else %>
 <% end %><br>
 <div style= "margin-left:495px">
@@ -49,17 +60,15 @@
 <!-- <a href="/pay"><button class="button" style=" background-color: light green; margin-left:470px; font-size: 30px "><span>Check Out </span></button></a> -->
 </div>
 <br>
-
 <br>
 
-<h6>Important Info </h6>
-	<p>The following products delivery prices will differ according to how far your restaurant is from the location of the product. If the restaurant is far away from the product, the estimate price for delivery can increase and will be determined by supplier. Additionally, the time of delivery will depend on the urgency of the product delivery time. If the product is needed urgently, there will be an extra fee to pay to the delivery charges.</p><br>
+<div class="row">
+	<div class="col-md-12">
+		<h6>Important Info </h6>
+			<p>The following products delivery prices will differ according to how far your restaurant is from the location of the product. If the restaurant is far away from the product, the estimate price for delivery can increase and will be determined by supplier. Additionally, the time of delivery will depend on the urgency of the product delivery time. If the product is needed urgently, there will be an extra fee to pay to the delivery charges.</p>
+	</div>
 
+</div>
+</div>
 
-<style>
-.button {
-    background-color: #4CAF50; /* Green */
-}
-  </style>
-
-<!-- <a href="/pay"> -->
+<br>

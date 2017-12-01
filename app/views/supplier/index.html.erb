@@ -20,6 +20,12 @@
 
         <% #@users.each do |user| %>
           <tr>
+            <td>
+                 <% if !session[:user_id].nil? %>
+             <%= image_tag User.find(session[:user_id]).image.url(:thumb) %>
+            <% end %>
+
+          </td><br>
 
 <strong>
             <td>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171128142716) do
+ActiveRecord::Schema.define(version: 20171201120715) do
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20171128142716) do
     t.string "deliverytime"
     t.string "location"
     t.string "units"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,6 +82,10 @@ ActiveRecord::Schema.define(version: 20171128142716) do
     t.string "email"
     t.string "location"
     t.string "discreption"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

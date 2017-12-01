@@ -15,8 +15,14 @@
     <%= form.label :name %>
     <%= form.text_field :name, class: 'form-control' %>
   </div>
+  <span class="file-choose">
+      <div class="form-group">
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+      </div>
+    </span>
   <div class="form-group">
-    <%= form.label :discreption %>
+    <%= form.label :description %>
     <%= form.text_field :discreption, class: 'form-control' %>
   </div>
 

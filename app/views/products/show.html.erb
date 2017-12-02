@@ -35,15 +35,15 @@
       </div>
 
 
-      
+
 
       <div class="col-xs-12 col-sm-8">
         <div class="products__content">
           <div class="push-down-30"></div>
-          
+
           <span class="products__category">Muesli</span>
-          <h1 class="single-product__title"><span class="light">Fresh</span> Super Fruit</h1>
-          <span class="single-product__price"><%= @product.price %></span>
+          <h1 class="single-product__title"><span class="light">Fresh</span> New Products</h1>
+          <span class="single-product__price"><%= @product.supplyinstock %></span>
           <!-- <div class="single-product__rating">
             <span class="glyphicon  glyphicon-star  star-on"></span>
             <span class="glyphicon  glyphicon-star  star-on"></span>
@@ -70,7 +70,7 @@
 
           	<%= form_for(@order_item, remote: true) do |f| %>
         					<%= f.hidden_field :product_id, value: @product.id %>
-        					
+
 
         					<%= f.text_field :quantity, value: 1, min: 1, class: 'form-control' %>
 
@@ -175,10 +175,10 @@
   <!-- Products -->
   <div class="push-down-30">
     <div class="row">
-      
-      
-        
-        
+
+
+
+
           <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-6" data-price="16.88" data-rating="4">
   <div class="products__single">
     <figure class="products__image">
@@ -214,10 +214,10 @@
     </div>
   </div>
 </div>
-        
-      
-        
-        
+
+
+
+
           <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-3" data-price="4.61" data-rating="5">
   <div class="products__single">
     <figure class="products__image">
@@ -253,10 +253,10 @@
     </div>
   </div>
 </div>
-        
-      
-         <div class="clearfix visible-xs"></div> 
-        
+
+
+         <div class="clearfix visible-xs"></div>
+
           <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-5" data-price="3.84" data-rating="5">
   <div class="products__single">
     <figure class="products__image">
@@ -292,10 +292,10 @@
     </div>
   </div>
 </div>
-        
-      
-        
-        
+
+
+
+
           <div class="col-xs-6 col-sm-3  js--isotope-target  js--cat-3" data-price="6.18" data-rating="4">
   <div class="products__single">
     <figure class="products__image">
@@ -331,8 +331,8 @@
     </div>
   </div>
 </div>
-        
-      
+
+
     </div>
   </div>
 </div>
@@ -407,10 +407,10 @@
     </div>
   </footer>
   <div class="search-mode__overlay"></div>
-    
-    
+
+
     <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-    
+
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -46,9 +46,9 @@ get '/supplier' => "supplier#index"
   end
 
   resources :comments
-  resources :posts do
-    resources :comments
-  end
+  # resources :posts do
+  #   resources :comments
+  # end
 
 
 end

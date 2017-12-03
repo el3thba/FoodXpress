@@ -125,12 +125,12 @@
 
               <tr>
                 <!-- condition code -->
-               <% if !session[:user_id].nil? %>
+               <% #if !session[:user_id].nil? %>
                 <% if session[:user_id] == product[:user_id] %>
                    <td> <%= link_to "Edit", edit_product_path(product) %> /
                    <%= link_to "Delete", product_path(product), method: :delete %></td>
               <% end %>
-            <% end %>
+            <% #end %>
 
             </tr>
 
